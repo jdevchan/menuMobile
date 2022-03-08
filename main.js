@@ -13,5 +13,13 @@ function toggleMenu(event) {
   }
 }
 
+const links = document.querySelectorAll('nav ul li a')
+
+for(link of links) {
+  link.addEventListener('click', function(){
+    nav.classList.remove('active')
+  })
+}
+
 btnMobile.addEventListener('click', toggleMenu)
 btnMobile.addEventListener('touchstart', toggleMenu)
